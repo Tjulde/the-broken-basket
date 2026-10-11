@@ -25,7 +25,7 @@ stores, or supermarket transactions.
 
 | Column | Meaning | Example or format |
 |---|---|---|
-| `date_key` | Unique date used to connect dates to sales | YYYY-MM-DD |
+| `date_key` | Unique date used to connect date_key to Fact_sales | YYYY-MM-DD |
 | `Actual year` | Calendar year | 2026 |
 | `quater` | Calendar quater | whole number |
 | `Month` | Calendar month | whole number |
@@ -33,15 +33,20 @@ stores, or supermarket transactions.
 | `Day_of_week` | Describe the day | text |
 | `is_weekend` | Describe the weekend | text |
 | `Month_start` | long date | date |
-| `actual month` | Month name or number | March or 3 |
+| `Month_end` | Long date | date |
 
 ## `dim_products`
 
 | Column | Meaning | Example or format |
 |---|---|---|
-| `[actual product key]` | Unique product identifier | Integer |
-| `[actual product name column]` | Product name | Example product |
-| `[actual category column]` | Product category | Example category |
+| `product_key` | Unique product identifier connect product_key to Fact_sales | Integer |
+| `product_id` | Unique product identifier Natural key | Integer | 
+| `product name` | Product name | varchar |
+| `category` | Product category | varchar |
+| `tier` | Product levels | ENUM(Essential,Premium) |
+| `base_price` | Product direct price | DECIMAL |
+| `base_cost` | Product direct cost | DECIMAL |
+
 
 ## `dim_customers`
 
@@ -55,9 +60,12 @@ stores, or supermarket transactions.
 
 | Column | Meaning | Example or format |
 |---|---|---|
-| `[actual store key]` | Unique store identifier | Integer |
-| `[actual supermarket column]` | Supermarket or chain name | Example chain |
-| `[actual state column]` | State where the store is located | Lagos |
+| `store_key` | Unique store identifier connect store_key to Fact_sales | Integer |
+| `store_Id` | Unique store identifier Natural key | Integer |
+| `supermarket` | Supermarket or chain name | VARCHAR |
+| `state` | State where the store is located | Lagos |
+| `Location_type` | Brach in each state | High-Income_zone |
+
 
 ## Notes
 
