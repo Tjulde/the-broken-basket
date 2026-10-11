@@ -90,11 +90,11 @@ docs/         Supporting documentation, such as a data dictionary
 3. Open the Power BI file in Power BI Desktop.
 4. Update its data source settings if your local database connection differs.
 
-### Limitations
+## Limitations
 
--The dataset is synthetic.
--The results demonstrate an analytics workflow and should not be treated as evidence about actual Nigerian supermarket customers or sales. 
--The analysis identifies patterns in the data; it does not establish that inflation caused those patterns.
+- The dataset is synthetic.
+- The results demonstrate an analytics workflow and should not be treated as evidence about actual Nigerian supermarket customers or sales. 
+- The analysis identifies patterns in the data; it does not establish that inflation caused those patterns.
 
 ## Author
 
