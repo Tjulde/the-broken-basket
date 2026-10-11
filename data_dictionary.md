@@ -9,22 +9,31 @@ stores, or supermarket transactions.
 
 | Column | Meaning | Example or format |
 |---|---|---|
-| `sales_key` | Unique identifier for a sales line | Integer |
-| `date_key` | Date associated with the sale; links to the date dimension | YYYY-MM-DD |
+| `sale_id` | Primary Key | BIGINT AUTO_INCREMENT |
+| `ticket_id` | Transaction Reciept | VARCHAR |
 | `product_key` | Product identifier; links to the product dimension | Integer |
 | `customer_key` | Customer identifier; links to the customer dimension | Integer |
 | `store_key` | Store identifier; links to the store dimension | Integer |
-| `[actual quantity column]` | Number of units on this sales line | Number |
-| `[actual price column]` | Price recorded for one unit | Currency |
-| `[actual sales amount column]` | Sales amount for this line | Currency |
+| `quantity` | Number of units on this sales line | Number |
+| `unit_price` | Price recorded for one unit | Currency |
+| `cost_price` | Sales amount for this line | Currency |
+| `Gross_revenue` | Quantity *Unit_price | Currency |
+| `cost_of_goods_sold` | Total sales amount for this line | Currency |
+| `Gross_profit` | Direct expenses (Prime Profit  | Currency |
 
 ## `dim_date`
 
 | Column | Meaning | Example or format |
 |---|---|---|
-| `[actual date key]` | Unique date used to connect dates to sales | YYYY-MM-DD |
-| `[actual year column]` | Calendar year | 2026 |
-| `[actual month column]` | Month name or number | March or 3 |
+| `date_key` | Unique date used to connect dates to sales | YYYY-MM-DD |
+| `Actual year` | Calendar year | 2026 |
+| `quater` | Calendar quater | whole number |
+| `Month` | Calendar month | whole number |
+| `Month_name` | Describe the month | text |
+| `Day_of_week` | Describe the day | text |
+| `is_weekend` | Describe the weekend | text |
+| `Month_start` | long date | date |
+| `actual month` | Month name or number | March or 3 |
 
 ## `dim_products`
 
