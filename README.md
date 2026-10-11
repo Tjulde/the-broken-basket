@@ -90,41 +90,11 @@ docs/         Supporting documentation, such as a data dictionary
 3. Open the Power BI file in Power BI Desktop.
 4. Update its data source settings if your local database connection differs.
 
-Add any required MySQL version, setup notes, or data-loading instructions here so another analyst can reproduce your work.
-
-## Limitations
-
-- The transaction data is synthetic and should not be treated as evidence about actual Nigerian consumers or retailers.
-- [Add any other project-specific data or modeling limitations.]
-- [State whether the analysis establishes correlation only or supports any stronger conclusions.]
-
-## Case study
-
-### The business question
-
-Are customers buying fewer items per visit, which products or categories are changing, and what could retailers do to protect basket value?
-
-### My approach
-
-1. Designed a MySQL star schema for sales, dates, products, customers, and stores.
-2. Used SQL to prepare and analyze the synthetic transaction data.
-3. Built Power BI pages to compare basket behavior across products, customer segments, locations, and time periods.
-4. Created DAX measures to summarize the patterns shown in the report.
-
-### What I found
-
-- **Basket behavior:** [Verified finding, including the period and comparison]
-- **Products or categories:** [Verified finding]
-- **Customers or stores:** [Verified finding]
-
-### Recommendations
-
-- [Recommendation tied to a finding]
-- [Recommendation tied to a finding]
-
 ### Limitations
 
-The dataset is synthetic. The results demonstrate an analytics workflow and should not be treated as evidence about actual Nigerian supermarket customers or sales. The analysis identifies patterns in the data; it does not establish that inflation caused those patterns.
+-The dataset is synthetic.
+-The results demonstrate an analytics workflow and should not be treated as evidence about actual Nigerian supermarket customers or sales. 
+-The analysis identifies patterns in the data; it does not establish that inflation caused those patterns.
 
 ## Author
 
