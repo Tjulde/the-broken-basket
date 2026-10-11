@@ -98,7 +98,37 @@ Add any required MySQL version, setup notes, or data-loading instructions here s
 - [Add any other project-specific data or modeling limitations.]
 - [State whether the analysis establishes correlation only or supports any stronger conclusions.]
 
+## Case study
+
+### The business question
+
+Are customers buying fewer items per visit, which products or categories are changing, and what could retailers do to protect basket value?
+
+### My approach
+
+1. Designed a MySQL star schema for sales, dates, products, customers, and stores.
+2. Used SQL to prepare and analyze the synthetic transaction data.
+3. Built Power BI pages to compare basket behavior across products, customer segments, locations, and time periods.
+4. Created DAX measures to summarize the patterns shown in the report.
+
+### What I found
+
+- **Basket behavior:** [Verified finding, including the period and comparison]
+- **Products or categories:** [Verified finding]
+- **Customers or stores:** [Verified finding]
+
+### Recommendations
+
+- [Recommendation tied to a finding]
+- [Recommendation tied to a finding]
+
+### Limitations
+
+The dataset is synthetic. The results demonstrate an analytics workflow and should not be treated as evidence about actual Nigerian supermarket customers or sales. The analysis identifies patterns in the data; it does not establish that inflation caused those patterns.
+
 ## Author
 
 **Julde Toheed**  
 www.linkedin.com/in/julde-toheed-4441a8360 
+
+
