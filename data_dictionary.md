@@ -11,63 +11,64 @@ stores, or supermarket transactions.
 |---|---|---|
 | `sale_id` | Primary Key | BIGINT AUTO_INCREMENT |
 | `ticket_id` | Transaction Reciept | VARCHAR |
-| `product_key` | Product identifier; links to the product dimension | Integer |
-| `customer_key` | Customer identifier; links to the customer dimension | Integer |
-| `store_key` | Store identifier; links to the store dimension | Integer |
-| `quantity` | Number of units on this sales line | Number |
-| `unit_price` | Price recorded for one unit | Currency |
-| `cost_price` | Sales amount for this line | Currency |
-| `Gross_revenue` | Quantity *Unit_price | Currency |
-| `cost_of_goods_sold` | Total sales amount for this line | Currency |
-| `Gross_profit` | Direct expenses (Prime Profit  | Currency |
+| `product_key` | Product identifier; links to the product dimension | Integer Forign_Key |
+| `customer_key` | Customer identifier; links to the customer dimension | Integer Forign_Key |
+| `store_key` | Store identifier; links to the store dimension | Integer Forign_Key|
+| `quantity` | Number of units on this sales line | Int |
+| `unit_price` | Price recorded for one unit | Decimal(14,2)  |
+| `cost_price` | Sales amount for this line | Decimal(14,2) |
+| `Gross_revenue` | Quantity *Unit_price | DECIMAL(14,2) GENERATED ALWAYS AS (quantity * unit_price) STORED |
+| `cost_of_goods_sold` | Total sales amount for this line | DECIMAL(14,2) GENERATED ALWAYS AS (quantity * cost_price) STORED |
+| `Gross_profit` | Direct expenses (Prime Profit  | DECIMAL(14,2) GENERATED ALWAYS AS ((quantity * unit_price) - (quantity * cost_price)) STORED |
 
 ## `dim_date`
 
 | Column | Meaning | Example or format |
 |---|---|---|
-| `date_key` | Unique date used to connect date_key to Fact_sales | YYYY-MM-DD |
-| `Actual year` | Calendar year | 2026 |
-| `quater` | Calendar quater | Varchar |
-| `Month` | Calendar month | varchar |
-| `Month_name` | Describe the month | text |
-| `Day_of_week` | Describe the day | text |
-| `is_weekend` | Describe the weekend | text |
-| `Month_start` | long date | date |
-| `Month_end` | Long date | date |
+| `date_key` | Unique date used to connect date_key to Fact_sales | DATE PRIMARY KEY |
+| `Actual year` | Calendar year | INT NOT NULL |
+| `quater` | Calendar quater | INT NOT NULL |
+| `Month` | Calendar month | INT NOT NULL |
+| `Month_name` | Describe the month | VARCHAR(15) NOT NULL |
+| `Day_of_week` | Describe the day | VARCHAR(15) NOT NULL |
+| `is_weekend` | Describe the weekend | VARCHAR(3) NOT NULL |
+| `Month_start` | long date | DATE NOT NULL |
+| `Month_end` | Long date | DATE NOT NULL |
 
 ## `dim_products`
 
 | Column | Meaning | Example or format |
 |---|---|---|
-| `product_key` | Unique product identifier connect product_key to Fact_sales | Integer |
-| `product_id` | Unique product identifier Natural key | Integer | 
-| `product name` | Product name | varchar |
-| `category` | Product category | varchar |
+| `product_key` | Unique product identifier connect product_key to Fact_sales | INT AUTO_INCREMENT PRIMARY KEY |
+| `product_id` | Unique product identifier Natural key | INT NOT NULL UNIQUE | 
+| `product name` | Product name | VARCHAR(150) NOT NULLr |
+| `category` | Product category | VARCHAR(100) NOT NULL |
 | `tier` | Product levels | ENUM(Essential,Premium) |
-| `base_price` | Product direct price | DECIMAL |
-| `base_cost` | Product direct cost | DECIMAL |
+| `base_price` | Product direct price | DECIMAL(10,2) NOT NULL |
+| `base_cost` | Product direct cost | DECIMAL(10,2) NOT NULL |
 
 
 ## `dim_customers`
 
 | Column | Meaning | Example or format |
 |---|---|---|
-| `customer_key` | Unique customer identifier connects customer_key to fact_sales | Integer |
-| `customer_id` | Unique customer identifier naturel key | Integer |
-| `gender` | Customer age | VARCHAR |
-| `income_bracket` | Describe the income group | VARCHAR |
-| `loyalty_status` | Describe the loyalty to stay or not to saty | VARCHAR |
+| `customer_key` | Unique customer identifier connects customer_key to fact_sales | INT AUTO_INCREMENT PRIMARY KEY |
+| `customer_id` | Unique customer identifier naturel key | INT NOT NULL UNIQUE |
+| `gender` | Customer age | VARCHAR(10) NOT NULL |
+| `income_bracket` | Describe the income group | VARCHAR(20) NOT NULL |
+| `loyalty_status` | Describe the loyalty to stay or not to saty | VARCHAR(20) NOT NULL |
 
 
 ## `dim_stores`
 
 | Column | Meaning | Example or format |
 |---|---|---|
-| `store_key` | Unique store identifier connect store_key to Fact_sales | Integer |
-| `store_Id` | Unique store identifier Natural key | Integer |
-| `supermarket` | Supermarket or chain name | VARCHAR |
-| `state` | State where the store is located | Lagos |
-| `Location_type` | Brach in each state | High-Income_zone |
+| `store_key` | Unique store identifier connect store_key to Fact_sales | INT AUTO_INCREMENT PRIMARY KEY |
+| `store_Id` | Unique store identifier Natural key | INT NOT NULL UNIQUE |
+| `supermarket` | Supermarket or chain name | VARCHAR(100) NOT NULL |
+| `Retail_model` | Describe the selling strategies | VARCHAR(100) NOT NULL |
+| `state` | State where the store is located | VARCHAR(50) NOT NULL |
+| `Location_type` | Brach in each state | VARCHAR(80) NOT NULL |
 
 
 ## Notes
