@@ -27,8 +27,8 @@ stores, or supermarket transactions.
 |---|---|---|
 | `date_key` | Unique date used to connect date_key to Fact_sales | YYYY-MM-DD |
 | `Actual year` | Calendar year | 2026 |
-| `quater` | Calendar quater | whole number |
-| `Month` | Calendar month | whole number |
+| `quater` | Calendar quater | Varchar |
+| `Month` | Calendar month | varchar |
 | `Month_name` | Describe the month | text |
 | `Day_of_week` | Describe the day | text |
 | `is_weekend` | Describe the weekend | text |
@@ -52,9 +52,12 @@ stores, or supermarket transactions.
 
 | Column | Meaning | Example or format |
 |---|---|---|
-| `[actual customer key]` | Unique customer identifier | Integer |
-| `[actual segment column]` | Customer segment, if included | Example segment |
-| `[actual income column]` | Income bracket, if included | Example bracket |
+| `customer_key` | Unique customer identifier connects customer_key to fact_sales | Integer |
+| `customer_id` | Unique customer identifier naturel key | Integer |
+| `gender` | Customer age | VARCHAR |
+| `income_bracket` | Describe the income group | VARCHAR |
+| `loyalty_status` | Describe the loyalty to stay or not to saty | VARCHAR |
+
 
 ## `dim_stores`
 
@@ -69,6 +72,5 @@ stores, or supermarket transactions.
 
 ## Notes
 
-- Describe how your database defines sales, revenue, basket size, and transaction.
-- Explain any missing values or unusual codes.
-- Record any assumptions used to create synthetic data.
+- My **Sales or Revenue** figure is my Gross_Revenue column, **Total_transaction** is the distinct count of my ticket_id , and also **Basket size** is the Total_Units_Solds divided by the Total_transaction.
+- For this Data was generated from one generated from **GitHub** and converted to using **ChatGPT** synthetic. 
