@@ -74,4 +74,4 @@ stores, or supermarket transactions.
 ## Notes
 
 - My **Sales or Revenue** figure is my Gross_Revenue column, **Total_transaction** is the distinct count of my ticket_id , and also **Basket size** is the Total_Units_Solds divided by the Total_transaction.
-- For this it was Data was generated from one generated from **GitHub** and converted to using **ChatGPT** synthetic. 
+- For this Data it was generated from one from **GitHub** and converted to **Synthetics Data** using **ChatGPT** AI tool. 
