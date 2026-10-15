@@ -14,7 +14,7 @@ stores, or supermarket transactions.
 | `product_key` | Product identifier; links to the product dimension | Integer Forign_Key |
 | `customer_key` | Customer identifier; links to the customer dimension | Integer Forign_Key |
 | `store_key` | Store identifier; links to the store dimension | Integer Forign_Key|
-| `quantity` | Number of units on this sales line | Int |
+| `quantity` | Number of units on this sales line | Integer |
 | `unit_price` | Price recorded for one unit | Decimal(14,2)  |
 | `cost_price` | Sales amount for this line | Decimal(14,2) |
 | `Gross_revenue` | Quantity *Unit_price | DECIMAL(14,2) GENERATED ALWAYS AS (quantity * unit_price) STORED |
