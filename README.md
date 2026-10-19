@@ -96,6 +96,8 @@ docs/         Supporting documentation, such as a data dictionary
 - The results demonstrate an analytics workflow and should not be treated as evidence about actual Nigerian supermarket customers or sales. 
 - The analysis identifies patterns in the data; it does not establish that inflation caused those patterns.
 
+- Dataset covers only 4 retail brands (Bokku Mart, Justrite Superstore, Prince Ebeano, and FoodCo Supermarket)
+
 ## Author
 
 **Julde Toheed**  
