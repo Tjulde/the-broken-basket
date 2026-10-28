@@ -12,7 +12,9 @@ The project uses synthetic transaction data and combines MySQL data modeling and
 
 ## Business question
 
-Are customers buying fewer items per visit, which products or categories are losing basket penetration, and what actions could retailers consider to protect customer spend?
+- Are customers buying fewer items per visit
+- which products or categories are losing basket penetration, and
+- what actions could retailers consider to protect customer spend?
 
 ## Project scope
 
@@ -34,7 +36,7 @@ The analysis is designed to examine:
 
 ## Data model
 
-The model uses a central sales fact table connected to descriptive dimensions which is an E-Commerce Order Management or Orders & Customer ERD.
+The model uses a central sales fact table connected to descriptive dimensions which is an E-Commerce Order Management or Orders & Customer ERD. it's also **Star Schema** 
 
 **Fact table:** dim _fact_sales  
 **Dimensions:** dim_date, dim_product, Dim_customer, dim_store, and dim inflation context 
