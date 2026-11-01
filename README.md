@@ -7,7 +7,7 @@
 ![MySQL](https://img.shields.io/badge/MySQL-SQL%20%2B%20Star%20Schema-4479A1?logo=mysql&logoColor=white)
 ![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard%20%2B%20DAX-F2C811?logo=powerbi&logoColor=black)
 
-**[📊 View my portfolio](ADD-YOUR-PORTFOLIO-LINK-HERE)** · **[🧱 How it was built](#4-methodology)**
+**[📊 View my portfolio](https://canva.link/vphk23ey1ch7elt)** · **[🧱 How it was built](#4-methodology)**
 
 </div>
 
@@ -173,6 +173,6 @@ data_dictionary.md      Column definitions
 <div align="center">
 
 **Built by [Julde Toheed]** · Data Analyst
-[LinkedIn](www.linkedin.com/in/julde-toheed) · [Email](mailto:juldetoheed@gmail.com) · [Portfolio](ADD-YOUR-PORTFOLIO-LINK-HERE)
+[LinkedIn](www.linkedin.com/in/julde-toheed) · [Email](mailto:juldetoheed@gmail.com) · [Portfolio](https://canva.link/vphk23ey1ch7elt)
 
 </div>
